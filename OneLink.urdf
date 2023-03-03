@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+
+  <material name="blue">
+    <color rgba="1 0 0 1"/>
+  </material>
+
+<link name="world"></link>
+
+<joint name="base_joint" type="fixed">
+    <origin xyz="2 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>        
+</joint>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 1" rpy="0 0.78539816339 0"/>
+      <geometry>
+        <cylinder length="1" radius="0.01"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+
+
+</robot>
